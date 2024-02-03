@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png">
+    <title>Informatic-Головна</title>
+    <style>
+        /* Стили для контейнера с содержимым */
+        .content-below {
+            margin-top: 50px; /* Отступ сверху, чтобы контент не наслаивался на футер */
+            padding: 20px; /* Внутренние отступы для контента */
+        }
+
+        /* Удаляем подчеркивание у ссылок */
+        .nav-link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container-1">
+            <div class="header-inner">
+                <a href="index.html" class="header-logo">Informatic</a>
+                <nav class="nav">
+                    <a class="nav-link" href="index.html">Главная</a>
+                    <a class="nav-link" href="author.html">Автор</a>
+                    <select class="nav-select" id="selectMenu" onchange="location = this.value;">
+                        <option value="" disabled selected>Роботи</option>
+                        <option value="01.24_lesson №36-37.html">24.01_Урок№36-37</option>
+                    </select>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container-2">
+            <div class="intro">
+                <img src="img/intro.png" width="520" height="360" align="right" />
+                <h1>
+                    Informatic - це сайт на яком <br> публікуються роботи з Інформатики <br>учня Андрія Чернушко
+                </h1>
+                <!-- Содержимое ниже -->
+                <div class="content-below">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container-3">
+            Copyright © Informatic 2024. Усі права захищені.
+        </div>
+    </footer>
+</body>
+</html>
