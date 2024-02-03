@@ -1,0 +1,110 @@
+/*Container*/
+
+.container-1 {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.container-2 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Header*/
+
+.header {
+    width: 70%;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #808080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    background: #232323;
+}
+
+/*Intro*/
+
+.intro {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    padding-top: 300px;
+    color: #fff
+}
+
+/*Nav*/
+
+.nav {
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+.nav-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px 30px 5px 10px;
+    border: none; /* Удаляем рамку кнопки */
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0); /* Прозрачный фон кнопки */
+    background-image: url('data:image/svg+xml,\
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">\
+            <path d="M7 10l5 5 5-5z" />\
+        </svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    outline: none; /* Удаляем обводку при фокусе */
+    color: white; /* Устанавливаем цвет текста кнопки в белый */
+    font-weight: bold; /* Устанавливаем текст жирным */
+}
+/* Footer */
+.footer {
+    background-color: #333; /* Цвет фона футера */
+    color: #fff; /* Цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    width: 100%; /* Ширина на всю ширину экрана */
+    position: fixed; /* Фиксированная позиция */
+    bottom: 0; /* Поместить футер внизу страницы */
+}
+
