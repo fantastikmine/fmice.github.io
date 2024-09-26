@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Торговая Федерация FMICE" />
-    <meta
-        name="description"
-        content="Место для аренды торговых палаток в Торговой Федерации сервера FMICE!"
-    />
+    <meta name="description" content="Место для аренды торговых палаток в Торговой Федерации сервера FMICE!" />
     <meta name="language" content="Russian" />
     <meta name="author" content="sadangelq" />
     <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
@@ -15,7 +12,6 @@
     <script src="script.js"></script>
     <title>Торговая Федерация</title>
 </head>
-
 <body>
     <div class="scroll-container">
         <div class="scroll-progress" id="scrollProgress"></div>
@@ -23,7 +19,8 @@
 
     <header>
         <img src="images/logo.svg" class="h-12 w-12" alt="Логотип" />
-        <nav>
+        <button class="menu-toggle" id="menuToggle">Меню</button>
+        <nav id="navbar">
             <ul>
                 <li><a href="/index">FMICE</a></li>
                 <li><a href="index">Главная</a></li>
@@ -37,7 +34,7 @@
     <main>
         <section class="hero">
             <h1>
-                <strong>Попробуй новую подписку ТФ <br /><strong><span>новыми</span></strong> возможностями</strong>
+                <strong>Попробуй новую подписку ТФ <br />с <strong><span>новыми</span></strong> возможностями</strong>
             </h1>
             <p>
                 Приобретая подписку, вы получите новые возможности и <br />опыт торговли в ТФ!
@@ -88,26 +85,31 @@
                     data.forEach((item) => {
                         const row = document.createElement("tr");
                         row.innerHTML = `
-                                        <td>${item.tent}</td>
-                                        <td>${item.price_per_day}</td>
-                                        <td>${item.description}</td>
-                                        <td>${item.renter}</td>
-                                        <td>${item.available_from}</td>
-                                    `;
+                            <td>${item.tent}</td>
+                            <td>${item.price_per_day}</td>
+                            <td>${item.description}</td>
+                            <td>${item.renter}</td>
+                            <td>${item.available_from}</td>
+                        `;
                         tableBody.appendChild(row);
                     });
                 })
-                .catch((error) =>
-                    console.error("Ошибка загрузки данных:", error),
-                );
-        });
+                .catch((error) => console.error("Ошибка загрузки данных:", error));
 
-        // Обработчик события прокрутки
-        window.addEventListener("scroll", function () {
-            const scrollProgress = document.getElementById("scrollProgress");
-            const totalHeight = document.body.scrollHeight - window.innerHeight;
-            const progressHeight = (window.scrollY / totalHeight) * 100;
-            scrollProgress.style.height = progressHeight + "%"; // Изменяем высоту прогресса
+            // Обработчик события прокрутки
+            window.addEventListener("scroll", function () {
+                const scrollProgress = document.getElementById("scrollProgress");
+                const totalHeight = document.body.scrollHeight - window.innerHeight;
+                const progressHeight = (window.scrollY / totalHeight) * 100;
+                scrollProgress.style.height = progressHeight + "%"; // Изменяем высоту прогресса
+            });
+
+            // Toggle mobile menu
+            const menuToggle = document.getElementById("menuToggle");
+            const navbar = document.getElementById("navbar");
+            menuToggle.addEventListener("click", () => {
+                navbar.classList.toggle("active");
+            });
         });
     </script>
 </body>
