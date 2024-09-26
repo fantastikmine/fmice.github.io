@@ -78,6 +78,7 @@ nav ul li a:hover {
   background: linear-gradient(to right, #3e2cb5, #9a6dd7);
 }
 
+/* Style for the table container */
 .table-container {
   max-width: 600px;
   margin: 0 auto;
@@ -87,18 +88,34 @@ nav ul li a:hover {
   box-sizing: border-box;
 }
 
+/* Table styling */
 .tent-list {
   width: 80%;
   border-collapse: collapse;
   font-size: 14px;
   margin: 0 auto;
   border-radius: 8px;
+  /* Round the corners of the table */
   overflow: hidden;
+  /* Ensure rounded corners apply to table cells */
   border: 3px solid #252326;
+  /* Thicker border around the table */
 }
 
-.tent-list th, .tent-list td {
+.tent-list th,
+.tent-list td {
   padding: 8px;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
   text-align: left;
 }
 
@@ -110,7 +127,6 @@ th {
 td {
   color: white;
 }
-
 /* Footer Styles */
 footer {
   background-color: #1b1b1d;
