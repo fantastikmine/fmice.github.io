@@ -3,7 +3,6 @@ body {
   background-color: #1b1b1d;
   color: white;
   font-family: 'Poppins', sans-serif;
-  /* Используем более современный шрифт */
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -16,12 +15,6 @@ header {
   padding: 20px 40px;
   background-color: #1b1b1d;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #fff;
 }
 
 nav ul {
@@ -46,18 +39,6 @@ nav ul li a:hover {
   color: #ffffff;
 }
 
-/* Сообщение об ошибке */
-.error-message {
-  color: white;
-  padding: 90px;
-  text-align: center;
-  font-size: 2.0em;
-  border-radius: 5px;
-  margin: 20px auto;
-  max-width: 600px;
-}
-
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 100px 20px;
@@ -97,129 +78,6 @@ nav ul li a:hover {
   background: linear-gradient(to right, #3e2cb5, #9a6dd7);
 }
 
-/* Subscription Plans Styling */
-.subscription-plans {
-  text-align: center;
-  padding: 70px 20px;
-  background-color: #252326;
-}
-
-.plan {
-  background-color: #1b1b1d;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 2px solid #252326;
-  padding: 25px;
-  margin: 20px auto;
-  width: 80%;
-  max-width: 350px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.plan:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.plan h2 {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.plan p {
-  color: #b785f8;
-  font-size: 18px;
-}
-
-.plan ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.plan ul li {
-  color: white;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.plan .button {
-  display: inline-block;
-  margin-top: 20px;
-}
-
-/* Стили для карточек подписки */
-.plans-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.plan-card {
-  background-color: #1b1b1d;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 2px solid #252326;
-  padding: 30px;
-  width: 280px;
-  text-align: left;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.plan-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.plan-card h2 {
-  margin: 0;
-  font-size: 1.6em;
-  color: #fff;
-}
-
-.plan-card .price {
-  font-size: 2.2em;
-  color: #ffffff;
-}
-
-.plan-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.plan-card ul li {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.plan-card ul .disabled {
-  color: #555;
-  text-decoration: line-through;
-}
-
-/* Выделение Premium */
-.highlighted {
-  border: 2px solid #ffd700;
-}
-
-.badge {
-  background-color: #ffd700;
-  color: #333;
-  padding: 5px 10px;
-  border-radius: 5px;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-/* Style for the table container */
 .table-container {
   max-width: 600px;
   margin: 0 auto;
@@ -229,34 +87,18 @@ nav ul li a:hover {
   box-sizing: border-box;
 }
 
-/* Table styling */
 .tent-list {
   width: 80%;
   border-collapse: collapse;
   font-size: 14px;
   margin: 0 auto;
   border-radius: 8px;
-  /* Round the corners of the table */
   overflow: hidden;
-  /* Ensure rounded corners apply to table cells */
   border: 3px solid #252326;
-  /* Thicker border around the table */
 }
 
-.tent-list th,
-.tent-list td {
+.tent-list th, .tent-list td {
   padding: 8px;
-  text-align: left;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 10px;
   text-align: left;
 }
 
@@ -266,5 +108,57 @@ th {
 }
 
 td {
+  color: white;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1b1b1d;
+  padding: 40px 0;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #bfbfbf;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
   color: white;
 }
