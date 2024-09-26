@@ -11,6 +11,7 @@
     <title>Торговая Федерация — Разработчики</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <img src="images/logo.svg" class="logo" alt="Логотип">
@@ -25,84 +26,86 @@
         </nav>
     </header>
     <main>
-        <h1>Разработчики</h1>
+        <h1 class="developers-title">Разработчики</h1>
         <div class="developer-container">
             <div class="developer-card">
-                <img src="mihandr.jpg" alt="Mihandr" class="profile-img">
-                <h2>Mihandr</h2>
-                <div class="badge-container">
-                    <span class="badge boss">😎 Боссик</span>
-                    <span class="badge coder">💻 Кодер</span>
+                <img src="path/to/mihandr-profile.jpg" alt="Mihandr" class="profile-img">
+                <h3 class="developer-name">sadangelq</h3>
+                <div class="roles">
+                    <span class="role bossik">😎 Боссик</span>
+                    <span class="role coder">💻 Кодер</span>
                 </div>
-                <div class="social-links">
-                    <a href="#"><img src="telegram-icon.png" alt="Telegram"></a>
-                    <a href="#"><img src="github-icon.png" alt="Github"></a>
-                    <a href="#"><img src="x-icon.png" alt="X"></a>
+                <div class="social-icons">
+                    <a href="https://t.me/compot9867tyt" target="_blank"><img alt="✈️Telegram"></a>
+                    <a href="https://github.com/fantastikmine" target="_blank"><img alt="🐙GitHub"></a>
                 </div>
             </div>
+
             <div class="developer-card">
-                <img src="lifeegor.jpg" alt="LifeEgor" class="profile-img">
-                <h2>LifeEgor</h2>
-                <div class="badge-container">
-                    <span class="badge pr-manager">🎭 PR Менеджер</span>
-                    <span class="badge quality">🧐 Контроль качества</span>
+                <img src="path/to/lifeegor-profile.jpg" alt="LifeEgor" class="profile-img">
+                <h3 class="developer-name">sadangelq</h3>
+                <div class="roles">
+                    <span class="role pr-manager">😆 PR Менеджер</span>
+                    <span class="role quality-control">😁 Контроль качества</span>
                 </div>
-                <div class="social-links">
-                    <a href="#"><img src="telegram-icon.png" alt="Telegram"></a>
+                <div class="social-icons">
+                    <a href="https://t.me/compot9867tyt" target="_blank"><img alt="✈️Telegram"></a>
                 </div>
             </div>
         </div>
     </main>
 
     <!-- Footer Section -->
-        <br><br><br><br><br><footer>
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <img src="images/logo.svg" alt="Логотип компании" class="footer-icon" />
-                    <p>FM Торговая Федерация</p>
-                    <p>Copyright © FMTradeFederation 2024. Все права защищены.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Команда</h4>
-                    <ul>
-                        <li><a href="developers">Разработчики</a></li>
-                        <li><a href="https://t.me/fmwhelps_bot">Техподдержка</a></li>
-                    </ul>
-                </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.svg" alt="Логотип компании" class="footer-icon" />
+                <p>FM Торговая Федерация</p>
+                <p>Copyright © FMTradeFederation 2024. Все права защищены.</p>
             </div>
-        </footer>
+            <div class="footer-section">
+                <h4>Команда</h4>
+                <ul>
+                    <li><a href="developers">Разработчики</a></li>
+                    <li><a href="https://t.me/fmwhelps_bot">Техподдержка</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                fetch("data.json")
-                    .then((response) => response.json())
-                    .then((data) => {
-                        const tableBody = document.getElementById("tent-data");
-                        data.forEach((item) => {
-                            const row = document.createElement("tr");
-                            row.innerHTML = 
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("data.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    const tableBody = document.getElementById("tent-data");
+                    data.forEach((item) => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = 
                                             <td>${item.tent}</td>
                                             <td>${item.price_per_day}</td>
                                             <td>${item.description}</td>
                                             <td>${item.renter}</td>
                                             <td>${item.available_from}</td>
-                                        ;
-                            tableBody.appendChild(row);
-                        });
-                    })
-                    .catch((error) =>
-                        console.error("Ошибка загрузки данных:", error),
-                    );
-            });
+                            ;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch((error) =>
+                    console.error("Ошибка загрузки данных:", error),
+                );
+        });
 
-            // Обработчик события прокрутки
-            window.addEventListener("scroll", function () {
-                const scrollProgress =
-                    document.getElementById("scrollProgress");
-                const totalHeight =
-                    document.body.scrollHeight - window.innerHeight;
-                const progressHeight = (window.scrollY / totalHeight) * 100;
-                scrollProgress.style.height = progressHeight + "%"; // Изменяем высоту прогресса
-            });
-        </script>
-    </body>
+        // Обработчик события прокрутки
+        window.addEventListener("scroll", function () {
+            const scrollProgress =
+                document.getElementById("scrollProgress");
+            const totalHeight =
+                document.body.scrollHeight - window.innerHeight;
+            const progressHeight = (window.scrollY / totalHeight) * 100;
+            scrollProgress.style.height = progressHeight + "%"; // Изменяем высоту прогресса
+        });
+    </script>
+</body>
+
 </html>
